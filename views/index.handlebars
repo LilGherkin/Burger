@@ -1,1 +1,18 @@
-<p>Successfully connected to hte server!</p>
+<p>Successfully connected to the server!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h3>Burgers To Be Eaten</h3>
+            <ul class="list-group">
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        <li class="list-group-item">
+                            {{id}}
+                            {{burger_name}}
+                            <button class="btn btn-outline-warning btn-sm devour-btn" data-id="{{id}}" type="button">Eat Me</button>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div>
